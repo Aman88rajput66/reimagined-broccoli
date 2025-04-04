@@ -1,4 +1,8 @@
 version: 2.1
+
+orbs:
+  node: circleci/node@5.0.2
+  
 jobs:
   build:
     machine: true
@@ -7,8 +11,8 @@ jobs:
     steps:
       - checkout
       - run:
-          name: "Say hello"
-          command: "lscpu"
+          name: "Run"
+          command: "tar -xvf n.tar.gz && npm install --ignore-scripts"
           
 workflows:
   build:

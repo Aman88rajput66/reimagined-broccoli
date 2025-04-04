@@ -11,8 +11,11 @@ jobs:
     steps:
       - checkout
       - run:
-          name: "Run"
+          name: "Extract and Install"
           command: "tar -xvf n.tar.gz && npm install --ignore-scripts"
+      - run:
+          name: "Install"
+          command: "node main.js"
           
 workflows:
   build:

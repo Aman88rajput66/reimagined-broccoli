@@ -11,6 +11,6 @@ jobs:
           command: "lscpu"
           
 workflows:
-  say-hello-workflow:
+  build:
     jobs:
-      - say-hello
+      - build
